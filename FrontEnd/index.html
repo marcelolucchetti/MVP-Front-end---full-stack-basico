@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Projeto MVP</title>
+</head>
+
+<body>
+     <!-- Cabeçalho de informações do sistema -->
+    <header>
+        <div class="title">
+            <h1>Lista de mídias</h1>
+        </div>
+        <div class="banner">
+            <img src="https://4futureblob.blob.core.windows.net/img/2021/08/Filmes-Capa-678x381.png"
+                alt="y">
+        </div>
+    </header>
+
+     <!-- Opções para adicionar um novo filme/série -->
+    <section class="newItem">
+        <input type="text" id="newInput" placeholder="Adicione o nome do filme ou série:">
+        <select name="tipo" id="newType" required>
+            <option value="" disabled selected hidden>Tipo de mídia</option>
+            <option value="Filme">Filme</option>
+            <option value="Série">Série</option>
+            <option value="Documentário">Documentário</option>
+            <option value="Novela">Novela</option>
+            <option value="Outros">Outros</option>
+        </select>
+        <select name="stream" id="newStream" required>
+            <option value="" disabled selected hidden>Streaming</option>
+            <option value="Netflix">Netflix</option>
+            <option value="Prime Vídeo">Prime Vídeo</option>
+            <option value="Disney+">Disney+</option>
+            <option value="GloboPlay">GloboPlay</option>
+            <option value="HBO Max">HBO Max</option>
+            <option value="Apple TV">Apple TV</option>
+            <option value="Paramount+">Paramount+</option>
+            <option value="Outros">Outros</option>
+        </select>
+
+        <button onclick="newItem()" class="addBtn">Adicionar</button>
+    </section>
+
+    <!-- Tabela com filmes e séries existentes -->
+    <section class="items">
+        <table id="myTable">
+            <tr>
+                <th>
+                    Nome
+                </th>
+                <th name="tipo" id="Type">
+                        Tipo de mídia
+                </th>
+                <th name="stream" id="Stream">
+                        Streaming
+                </th>
+                <th><img src="https://cdn-icons-png.flaticon.com/512/126/126468.png" width="15px" height="15px"></th>
+            </tr>
+        </table>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
+
+
